@@ -1,0 +1,22 @@
+server:
+  port: 8011
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9001/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+spring:
+  application:
+    name: school-service
+
+logging:
+  level:
+    com.troy.controller: DEBUG
